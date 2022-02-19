@@ -15,9 +15,9 @@ app.debug = True
 
 
 
-@app.route("/index") #the home page
-def index():
-    return render_template("index.html")
+@app.route("/") #the home page
+# def index():
+#     return render_template("index.html")
 
 @app.route('/predict',methods=['POST'])
 def predict():
