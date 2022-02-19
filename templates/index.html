@@ -1,0 +1,213 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Refresh" content="2; url=public/index.html" />
+
+    <title>Flight Price Prediction</title>
+
+
+    <!-- BootStrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="static/css/styles.css">
+
+
+
+<style>
+
+.design {
+    color: black;
+    font-family: Sans-serif; 
+    font-style: Italic;
+    
+}
+
+body{
+    background-color: #92a8d1;
+}
+     
+</style>
+
+</head>
+
+<body>
+    
+    <h1 align="center" style="font-family: algerian; background-color: black; color: white;"> Flight Price Prediction Ml App </h1> 
+           
+
+    <br><br><br>
+
+
+    <div class="container">
+
+
+
+        <form action="/predict" method="post">
+
+
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Departure Date</h5>
+                            <!-- Departure -->
+                            <input type="datetime-local" name="Dep_Time" id="Dep_Time" required="required">
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <br>
+                <br>
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Arrival Date</h5>
+                            <!-- Arrival -->
+                            <input type="datetime-local" name="Arrival_Time" id="Arrival_Time" required="required">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <br>
+            <br>
+            <br>
+
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <!-- Source -->
+                            <h5 class="card-title">Origin</h5>
+                            <select name="Out_Cities" id="Out_Cities" required="required">
+                              <!-- AMD [Ahmedabad] missing one -->
+                              <option value="Ahmedabad">Ahmedabad</option>
+                              <option value="Bengaluru">Bengaluru</option>
+                              <option value="Mumbai">Mumbai</option>
+                              <option value="Kolkata">Kolkata</option>
+                              <option value="Delhi">Delhi</option>
+                              <option value="Jaipur">Jaipur</option>
+                              <option value="Bhubaneswar">Bhubaneswar</option>
+                              <option value="Bhopal">Bhopal</option>
+                              <option value="Goa">Goa</option>
+                              <option value="Hyderabad">Hyderabad</option>
+                              <option value="Chandigarh">Chandigarh</option>
+                              <option value="Dr. Ambedkar Nagar">Dr. Ambedkar Nagar</option>
+                              <option value="Pune">Pune</option>
+                              <option value="Vijayawada">Vijayawada</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Destination</h5>
+                            <!-- Destination -->
+                            <select name="Return_Cities" id="Return_Cities" required="required">
+                              <!-- AGX [Agatti Island] missing one -->
+                                <option value="Bhubaneswar">Bhubaneswar</option>
+                                <option value="Bengaluru">Bengaluru</option>
+                                <option value="Mumbai">Mumbai</option>
+                                <option value="Kolkata">Kolkata</option>
+                                <option value="Delhi">Delhi</option>
+                                <option value="Goa">Goa</option>
+                                <option value="Hyderabad">Hyderabad</option>
+                                <option value="Indore">Indore</option>
+                                <option value="Jaipur">Jaipur</option>
+                                <option value="Lucknow">Lucknow</option>
+                                <option value="Chennai">Chennai</option>
+                                <option value="Dr. Ambedkar Nagar">Dr. Ambedkar Nagar</option>
+                                <option value="Pune">Pune</option>
+                                <option value="Bhubaneswar">Bhubaneswar</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <br>
+            <br>
+            <br>
+
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Stopage</h5>
+                            <!-- Total Stops -->
+                            <select name="Total_Stops" required="required">
+                                <option value="0">Non-Stop</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Select the Airline</h5>
+
+                            <select name="Out_Airline" id="Out_Airline" required="required">
+                              <!-- Airline missing Air India -->
+                                <option value="AirAsia India">AirAsia India</option>
+                                <option value="Emirates">Emirates</option>
+                                <option value="GoFirst">GoFirst</option>
+                                <option value="IndiGo">IndiGo</option>
+                                <option value="KLM">KLM</option>
+                                <option value="Lufthansa">Lufthansa</option>
+                                <option value="Multiple Airlines">Multiple Airlines</option>
+                                <option value="Qatar Airways">Qatar Airways</option>
+                                <option value="SpiceJet">SpiceJet</option>
+                                <option value="Vistara">Vistara</option>
+                                <option value="Air India">Air India</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <br>
+            <br>
+            <br>
+            <!-- Submit -->
+            <div class = "text-center">
+            <input type="submit" value="Submit" class="btn btn-dark">
+            </div>
+        </form>
+
+        <br>
+        <br>
+        <div class = "Prediction"><h5>{{ origin }}<h5>
+            {{ Out_Airline }}<h5>{{ price }}<h5>{{ optimal_time }}
+            
+        </div>
+
+
+
+
+
+
+
+
+    <!-- JavaScript  -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
