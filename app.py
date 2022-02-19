@@ -19,7 +19,7 @@ app.debug = True
 def index():
     return render_template("index.html")
 
-@app.route('/predict',methods=['POST'],action='/predict')
+@app.route('/predict',methods=['POST'])
 def predict():
     
     if request.method == 'POST':
