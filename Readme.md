@@ -50,7 +50,7 @@ The application is a simple flight price prediction which uses a ML trained mode
 
 We started with reading the dataset and using basic code to visualise the columns, its data types. 
 
-` `a. Data Selection.
+a. Data Selection.
 
 b. Data Pre-processing.
 
