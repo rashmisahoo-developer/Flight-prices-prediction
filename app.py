@@ -15,7 +15,7 @@ app.debug = True
 
 
 
-@app.route("/") #the home page
+@app.route("/index") #the home page
 def index():
     return render_template("index.html")
 
