@@ -44,7 +44,7 @@ body{
 
 
 
-        <form action="/predict" method="post">
+        <form action="/predict" method="post" >
 
 
             <div class="row">
@@ -53,7 +53,7 @@ body{
                         <div class="card-body">
                             <h5 class="card-title">Departure Date</h5>
                             <!-- Departure -->
-                            <input type="datetime-local" name="Dep_Time" id="Dep_Time" required="required">
+                            <input type="datetime-local" name="Dep_Time" id="Dep_Time" required>
                         </div>
                     </div>
                 </div>
@@ -65,7 +65,7 @@ body{
                         <div class="card-body">
                             <h5 class="card-title">Arrival Date</h5>
                             <!-- Arrival -->
-                            <input type="datetime-local" name="Arrival_Time" id="Arrival_Time" required="required">
+                            <input type="datetime-local" name="Arrival_Time" id="Arrival_Time" required>
                         </div>
                     </div>
                 </div>
@@ -106,7 +106,7 @@ body{
                         <div class="card-body">
                             <h5 class="card-title">Destination</h5>
                             <!-- Destination -->
-                            <select name="Return_Cities" id="Return_Cities" required="required">
+                            <select name="Return_Cities" id="Return_Cities" required>
                               <!-- AGX [Agatti Island] missing one -->
                                 <option value="Bhubaneswar">Bhubaneswar</option>
                                 <option value="Bengaluru">Bengaluru</option>
@@ -140,7 +140,7 @@ body{
                         <div class="card-body">
                             <h5 class="card-title">Stopage</h5>
                             <!-- Total Stops -->
-                            <select name="Total_Stops" required="required">
+                            <select name="Total_Stops" required
                                 <option value="0">Non-Stop</option>
                                 <option value="1">1</option>
                                 <option value="2">2</option>
@@ -153,7 +153,7 @@ body{
                         <div class="card-body">
                             <h5 class="card-title">Select the Airline</h5>
 
-                            <select name="Out_Airline" id="Out_Airline" required="required">
+                            <select name="Out_Airline" id="Out_Airline" required>
                               <!-- Airline missing Air India -->
                                 <option value="AirAsia India">AirAsia India</option>
                                 <option value="Emirates">Emirates</option>
